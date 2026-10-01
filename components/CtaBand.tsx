@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { Reveal } from "@/components/motion/Reveal";
 
 export function CtaBand({
-  title = "Ready to move your freight?",
-  lede = "Share your lane details and equipment needs. Our team will respond with a clear quote and next steps.",
+  title = "Ready to join our driving team?",
+  lede = "Owner operators and company drivers — tell us about your experience and equipment. We will follow up with next steps.",
 }: {
   title?: string;
   lede?: string;
@@ -21,10 +21,10 @@ export function CtaBand({
         <div className="flex flex-wrap gap-3">
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Link
-              href="/quote"
+              href="/join-us"
               className="inline-flex rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-brand hover:bg-slate-100"
             >
-              Get a Quote
+              Join us
             </Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>

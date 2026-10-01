@@ -34,7 +34,7 @@ export const privacyPolicy = {
             "Consent: Your mobile number will only be used for SIOX Transports communications.",
             "No Third-Party Sharing: We do NOT share, sell, or disclose your phone number or SMS consent to any third parties for marketing purposes.",
             "Opt-Out Instructions: You may opt out of receiving SMS messages at any time by replying “STOP” to any message.",
-            "Help Instructions: For assistance, reply “HELP”, call us at +1 (608) 888-9858, or email us at info@sioxtransports.com.",
+            "Help Instructions: For assistance, reply “HELP”, call us at +1 608-608-8110, or email us at info@sioxtransports.com.",
             "Message Disclaimer: Message and data rates may apply. Messaging frequency may vary.",
           ],
         },
@@ -62,7 +62,7 @@ export const privacyPolicy = {
           items: [
             "Opt-In Message: “Thank you for opting into SMS messages from SIOX Transports. To opt out at any time, reply STOP. For assistance, reply HELP. Message and data rates may apply. Messaging frequency may vary.”",
             "Opt-Out Message: “Thank you for opting out of SMS messages from SIOX Transports. You will not receive any further SMS communications. To opt back in, reply START.”",
-            "Help Message: “Thank you for contacting SIOX Transports. For immediate assistance, please call +1 (608) 888-9858 or visit sioxtransports.com. Message and data rates may apply.”",
+            "Help Message: “Thank you for contacting SIOX Transports. For immediate assistance, please call +1 608-608-8110 or visit sioxtransports.com. Message and data rates may apply.”",
           ],
         },
       ],
@@ -102,7 +102,7 @@ export const privacyPolicy = {
       contact: {
         name: "SIOX Transports",
         email: "info@sioxtransports.com",
-        phone: "+1 (608) 888-9858",
+        phone: "+1 608-608-8110",
       },
     },
   ],

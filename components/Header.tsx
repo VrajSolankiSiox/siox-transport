@@ -3,19 +3,51 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { careerLinks } from "@/lib/careers";
 import { nav } from "@/lib/content";
 import { Logo } from "./Logo";
+
+function CareerMenu({ onNavigate }: { onNavigate?: () => void }) {
+  return (
+    <div className="min-w-[200px] rounded-lg border border-border bg-white py-1 shadow-lg shadow-slate-900/10">
+      {careerLinks.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href}
+          onClick={onNavigate}
+          className="block px-4 py-2.5 text-sm text-slate-700 transition hover:bg-surface hover:text-brand"
+        >
+          {item.label}
+        </Link>
+      ))}
+    </div>
+  );
+}
 
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [careerOpen, setCareerOpen] = useState(false);
+  const [mobileCareerOpen, setMobileCareerOpen] = useState(false);
+  const careerTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { scrollY } = useScroll();
   const boxShadow = useTransform(
     scrollY,
     [0, 80],
     ["0 0 0 rgba(15, 23, 42, 0)", "0 12px 40px -24px rgba(15, 23, 42, 0.12)"],
   );
+
+  const careerActive = pathname.startsWith("/careers");
+
+  function openCareerMenu() {
+    if (careerTimer.current) clearTimeout(careerTimer.current);
+    setCareerOpen(true);
+  }
+
+  function closeCareerMenuDelayed() {
+    careerTimer.current = setTimeout(() => setCareerOpen(false), 120);
+  }
 
   return (
     <motion.header
@@ -45,14 +77,47 @@ export function Header() {
               </Link>
             );
           })}
+          <div
+            className="relative"
+            onMouseEnter={openCareerMenu}
+            onMouseLeave={closeCareerMenuDelayed}
+          >
+            <button
+              type="button"
+              className={`relative rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                careerActive ? "font-semibold text-brand" : "text-slate-600 hover:text-brand"
+              }`}
+              aria-expanded={careerOpen}
+              aria-haspopup="true"
+            >
+              {careerActive && (
+                <motion.span
+                  layoutId="nav-active"
+                  className="absolute inset-0 rounded-md bg-brand/8"
+                  transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                />
+              )}
+              <span className="relative inline-flex items-center gap-1">
+                Career
+                <svg viewBox="0 0 12 12" className="h-3 w-3 opacity-60" aria-hidden>
+                  <path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                </svg>
+              </span>
+            </button>
+            {careerOpen && (
+              <div className="absolute left-0 top-full z-50 pt-2">
+                <CareerMenu />
+              </div>
+            )}
+          </div>
         </nav>
         <div className="flex items-center gap-2">
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
             <Link
-              href="/quote"
+              href="/join-us"
               className="rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm shadow-brand/25 transition hover:bg-brand-dark"
             >
-              Get Quote
+              Join us
             </Link>
           </motion.div>
           <button
@@ -105,6 +170,34 @@ export function Header() {
               </Link>
             </li>
           ))}
+          <li>
+            <button
+              type="button"
+              className="flex w-full items-center justify-between py-3 text-sm font-medium text-slate-700"
+              onClick={() => setMobileCareerOpen((v) => !v)}
+              aria-expanded={mobileCareerOpen}
+            >
+              Career
+              <svg viewBox="0 0 12 12" className={`h-3 w-3 transition ${mobileCareerOpen ? "rotate-180" : ""}`} aria-hidden>
+                <path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+              </svg>
+            </button>
+            {mobileCareerOpen && (
+              <ul className="mb-2 ml-3 border-l border-border pl-3">
+                {careerLinks.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="block py-2 text-sm text-slate-600"
+                      onClick={() => setOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
         </ul>
       </motion.nav>
     </motion.header>

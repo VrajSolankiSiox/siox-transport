@@ -1,5 +1,5 @@
 export const contact = {
-  phone: "(608) 888-9858",
+  phone: "608-608-8110",
   phoneHref: "tel:+16088889858",
   email: "info@sioxtransports.com",
   emailHref: "mailto:info@sioxtransports.com",
@@ -9,7 +9,7 @@ export const contact = {
 };
 
 export const footerTagline =
-  "Reliable U.S. freight solutions built on safety, trust and technology, moving businesses forward with precision and care.";
+  "Moving Your Business Forward with Reliable Freight Solutions, Advanced Technology, Uncompromising Safety, and Precision You Can Trust—Every Mile, Every Shipment, Every Time.";
 
 export const nav = [
   { href: "/", label: "Home" },
@@ -41,31 +41,31 @@ export const services = [
     short: "Shared space, with the same standard of care.",
     body: "When the freight does not need a whole trailer, it still needs a plan. LTL with SIOX is built around clear handoffs, protected handling, and updates you do not have to chase.",
     fit: "Best for smaller shipments, multi-stop distribution, and freight that should ride with purpose.",
-    photo: "truck",
+    photo: "ltl",
   },
-  {
-    slug: "intermodal",
-    name: "Intermodal",
-    short: "Rail and road, coordinated as one move.",
-    body: "Longer lanes do not have to mean a less careful move. Intermodal pairs rail efficiency with truck pickup and delivery, so the freight stays on a single plan from origin dock to destination dock.",
-    fit: "Best for longer hauls where timing is planned and cost needs to stay disciplined.",
-    photo: "intermodal",
-  },
-  {
-    slug: "drayage",
-    name: "Drayage",
-    short: "Port and rail moves that keep boxes turning.",
-    body: "Containers stall when the street move is an afterthought. Drayage covers the short, time-sensitive miles between terminals, yards, and your warehouse — with appointments, chassis, and the dock in mind.",
-    fit: "Best for import and export freight that has to clear the terminal and hit a receiving window.",
-    photo: "flatbed",
-  },
+  // {
+  //   slug: "intermodal",
+  //   name: "Intermodal",
+  //   short: "Rail and road, coordinated as one move.",
+  //   body: "Longer lanes do not have to mean a less careful move. Intermodal pairs rail efficiency with truck pickup and delivery, so the freight stays on a single plan from origin dock to destination dock.",
+  //   fit: "Best for longer hauls where timing is planned and cost needs to stay disciplined.",
+  //   photo: "intermodal",
+  // },
+  // {
+  //   slug: "drayage",
+  //   name: "Drayage",
+  //   short: "Port and rail moves that keep boxes turning.",
+  //   body: "Containers stall when the street move is an afterthought. Drayage covers the short, time-sensitive miles between terminals, yards, and your warehouse — with appointments, chassis, and the dock in mind.",
+  //   fit: "Best for import and export freight that has to clear the terminal and hit a receiving window.",
+  //   photo: "flatbed",
+  // },
   {
     slug: "dry-van",
     name: "Dry Van",
     short: "Enclosed trailers for freight that needs protection.",
     body: "General freight rides dry, sealed, and out of the weather. Dry van is the backbone of the network: palletized goods, retail, manufacturing, and anything that simply needs to arrive as it left.",
     fit: "Best for packaged, palletized, and non-temperature freight.",
-    photo: "truck",
+    photo: "dryvan",
   },
   {
     slug: "reefer",

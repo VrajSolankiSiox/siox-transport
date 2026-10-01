@@ -53,10 +53,10 @@ export default function ServicesPage() {
                 <p className="mt-4 text-sm leading-relaxed text-slate-600">{service.body}</p>
                 <p className="mt-3 text-sm font-medium text-ink">{service.fit}</p>
                 <Link
-                  href="/quote"
+                  href="/join-us"
                   className="mt-6 inline-block rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark"
                 >
-                  Request a quote
+                  Join us
                 </Link>
               </Reveal>
               <Reveal

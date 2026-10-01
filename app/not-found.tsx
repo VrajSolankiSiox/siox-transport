@@ -10,8 +10,8 @@ export default function NotFound() {
         <Link href="/" className="rounded-md bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-dark">
           Home
         </Link>
-        <Link href="/quote" className="rounded-md border border-border px-4 py-2 text-sm font-semibold text-ink hover:border-brand">
-          Get a Quote
+        <Link href="/join-us" className="rounded-md border border-border px-4 py-2 text-sm font-semibold text-ink hover:border-brand">
+          Join us
         </Link>
       </div>
     </section>
