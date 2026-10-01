@@ -3,7 +3,6 @@ import { ContactForm } from "@/components/ContactForm";
 import { LocalPageHero } from "@/components/LocalPageHero";
 import { Reveal } from "@/components/motion/Reveal";
 import { contact } from "@/lib/content";
-import { media } from "@/lib/media";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -17,7 +16,6 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Talk to our team"
         lede="Call dispatch, send an email, or use the form below. We are available when your freight needs a decision."
-        image={media.trucksWide}
       />
       <section className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[1fr_1.4fr] md:py-16">
         <Reveal className="h-fit rounded-lg border border-border bg-surface p-6">

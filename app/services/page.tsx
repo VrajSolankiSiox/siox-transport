@@ -21,7 +21,6 @@ export default function ServicesPage() {
         eyebrow="Services"
         title="Freight services for every lane"
         lede="Dedicated truckload, shared LTL, intermodal, drayage, dry van, and reefer — each move planned around your schedule and cargo."
-        image={media.trucksWide}
       />
       <div className="border-b border-border bg-surface">
         <ul className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-6 py-3">

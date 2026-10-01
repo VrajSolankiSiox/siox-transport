@@ -21,7 +21,6 @@ export default function CompanyDriverCareerPage() {
         eyebrow="Careers"
         title={companyDriverContent.title}
         lede={companyDriverContent.lede}
-        image={careerHeroImages.companyDriver}
       />
       <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
         <Reveal>

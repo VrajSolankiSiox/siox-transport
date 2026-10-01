@@ -20,7 +20,6 @@ export default function AboutPage() {
         eyebrow="About us"
         title="A carrier that stays with the load"
         lede="SIOX Transports is a U.S. logistics partner for shippers who need dependable capacity and clear communication from pickup to delivery."
-        image={media.truck}
       />
       <section className="mx-auto grid max-w-6xl gap-10 px-6 py-14 md:grid-cols-2 md:py-20">
         <Reveal>

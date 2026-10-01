@@ -3,7 +3,6 @@ import Link from "next/link";
 import { LocalPageHero } from "@/components/LocalPageHero";
 import { Reveal } from "@/components/motion/Reveal";
 import { contact } from "@/lib/content";
-import { media } from "@/lib/media";
 import { privacyPolicy } from "@/lib/privacy";
 
 export const metadata: Metadata = {
@@ -18,7 +17,6 @@ export default function PrivacyPage() {
         eyebrow="Legal"
         title={privacyPolicy.title}
         lede={`Last updated: ${privacyPolicy.lastUpdated}`}
-        image={media.trucksWide}
       />
       <article className="mx-auto max-w-3xl px-6 py-12 md:py-16">
         <Reveal>

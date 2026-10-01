@@ -23,7 +23,6 @@ export default function OwnerOperatorCareerPage() {
         eyebrow="Careers"
         title={ownerOperatorContent.title}
         lede={ownerOperatorContent.lede}
-        image={careerHeroImages.ownerOperator}
       />
       <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
         <Reveal>

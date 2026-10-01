@@ -8,7 +8,6 @@ import {
   type ApplyingFor,
   type JoinEquipment,
 } from "@/lib/careers";
-import { media } from "@/lib/media";
 
 export const metadata: Metadata = {
   title: "Join Us",
@@ -42,7 +41,6 @@ export default async function JoinUsPage({
         eyebrow="Careers"
         title="Join us"
         lede="Tell us about your experience, equipment, and the role you are applying for. Our recruiting team will follow up with next steps."
-        image={media.trucksWide}
       />
       <section className="mx-auto max-w-2xl px-6 py-12 md:py-16">
         <Reveal>
