@@ -16,8 +16,8 @@ export function getResendConfig(): ResendConfig | null {
 
   return {
     apiKey,
-    from: FORM_MAIL_FROM,
-    to: FORM_MAIL_TO,
+    from: process.env.RESEND_FROM_EMAIL?.trim() || FORM_MAIL_FROM,
+    to: process.env.RESEND_TO_EMAIL?.trim() || FORM_MAIL_TO,
   };
 }
 
