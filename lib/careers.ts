@@ -22,14 +22,14 @@ export type ApplyingFor = (typeof applyingForOptions)[number];
 const unsplash = (id: string) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=900&q=80`;
 
-/** Equipment imagery: local assets where available, Unsplash elsewhere */
+/** Equipment imagery — local photos from public/ */
 export const equipmentImages: Record<JoinEquipment, string> = {
   Flatbed: media.flatbed,
-  Dryvan: media.ftl,
+  Dryvan: media.dryVan,
   Reefer: media.reefer,
   Stepdeck: unsplash("1519003722824-194d4455a60c"),
-  "Box truck": unsplash("1601584115197-04ecc0da31d7"),
-  Hotshot: unsplash("1426927308491-6380b6a9936f"),
+  "Box truck": media.boxTruck,
+  Hotshot: media.hotshot,
 };
 
 export const ownerOperatorEquipment: JoinEquipment[] = [
@@ -68,6 +68,6 @@ export const companyDriverContent = {
 };
 
 export const careerHeroImages = {
-  ownerOperator: unsplash("1601584115197-04ecc0da31d7"),
-  companyDriver: unsplash("1519003722824-194d4455a60c"),
+  ownerOperator: media.boxTruck,
+  companyDriver: media.dryVan,
 } as const;

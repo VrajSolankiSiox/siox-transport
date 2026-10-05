@@ -110,7 +110,7 @@ export function ServicesShowcase() {
         {services.map((service, index) => {
           const flipped = index % 2 === 1;
           const imageSrc = servicePhotoMap[service.photo] ?? servicePhotoMap.truck;
-          const imageLocal = imageSrc.startsWith("/");
+          const useContain = imageSrc.endsWith(".png");
 
           return (
             <article
@@ -136,7 +136,7 @@ export function ServicesShowcase() {
                       alt={service.name}
                       fill
                       className={
-                        imageLocal ? "object-contain object-center" : "object-cover object-center"
+                        useContain ? "object-contain object-center" : "object-cover object-center"
                       }
                       sizes="(min-width: 768px) 45vw, 100vw"
                     />

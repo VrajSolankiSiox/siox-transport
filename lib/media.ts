@@ -11,23 +11,20 @@ export const media = {
   person: "/person.png",
   ftl: "/ftl.png",
   intermodal: "/intermodal.png",
-  reefer: "/reefer.png",
-  flatbed: "/flatbed.png",
+  /** Equipment & service photography */
+  flatbed: "/Flatbed.jpg",
+  dryVan: "/DryVan.jpg",
+  reefer: "/Reefer.jpg",
+  boxTruck: "/BoxTruck.jpg",
+  hotshot: "/HotShot.jpg",
   heroVideo: "/vid.mp4",
   secondaryVideo: "/vid2.mp4",
 } as const;
 
-/** Curated Unsplash CDN URLs (see lib/unsplash.ts slots). */
-const unsplashPhoto = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=1200&q=80`;
-
 export const servicePhotoMap: Record<string, string> = {
-  /** Dedicated highway haul — full trailer, one move */
-  ftl: unsplashPhoto("1519003722824-194d4455a60c"),
-  /** Warehouse / consolidated freight — shared capacity */
-  ltl: unsplashPhoto("1553413077-190dd305871c"),
-  /** Enclosed dry van on the road */
-  dryvan: unsplashPhoto("1616432043562-3671ea2e5242"),
+  ftl: media.ftl,
+  ltl: media.truck,
+  dryvan: media.dryVan,
   reefer: media.reefer,
   truck: media.truck,
   intermodal: media.intermodal,
