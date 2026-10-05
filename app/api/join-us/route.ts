@@ -16,7 +16,7 @@ export async function POST(request: Request) {
       replyTo: data.email,
     });
 
-    const { apiKey, from } = requireResendConfig();
+    const { apiKey, from, to } = requireResendConfig();
     try {
       await sendEmail({
         apiKey,
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
         subject: "We received your SIOX Transports application",
         html: joinUsApplicantHtml(data.name),
         text: joinUsApplicantText(data.name),
-        replyTo: from,
+        replyTo: to,
       });
     } catch (confirmErr) {
       console.warn("[join-us] applicant confirmation email failed:", confirmErr);

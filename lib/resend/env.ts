@@ -1,4 +1,5 @@
-const DEFAULT_INBOX = "info@sioxtransports.com";
+const DEFAULT_FROM = "dispatch@sioxtransports.com";
+const DEFAULT_TO = "sales@sioxtransports.com";
 
 export type ResendConfig = {
   apiKey: string;
@@ -12,8 +13,8 @@ export function getResendConfig(): ResendConfig | null {
 
   return {
     apiKey,
-    from: process.env.RESEND_FROM_EMAIL?.trim() || DEFAULT_INBOX,
-    to: process.env.RESEND_TO_EMAIL?.trim() || DEFAULT_INBOX,
+    from: process.env.RESEND_FROM_EMAIL?.trim() || DEFAULT_FROM,
+    to: process.env.RESEND_TO_EMAIL?.trim() || DEFAULT_TO,
   };
 }
 
