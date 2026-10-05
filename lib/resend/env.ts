@@ -1,5 +1,8 @@
-const DEFAULT_FROM = "dispatch@sioxtransports.com";
-const DEFAULT_TO = "sales@sioxtransports.com";
+/** Outbound sender for contact + join-us form notifications (verify in Resend). */
+export const FORM_MAIL_FROM = "dispatch@sioxtransports.com";
+
+/** Inbox that receives all form submissions. */
+export const FORM_MAIL_TO = "sales@sioxtransports.com";
 
 export type ResendConfig = {
   apiKey: string;
@@ -13,8 +16,8 @@ export function getResendConfig(): ResendConfig | null {
 
   return {
     apiKey,
-    from: process.env.RESEND_FROM_EMAIL?.trim() || DEFAULT_FROM,
-    to: process.env.RESEND_TO_EMAIL?.trim() || DEFAULT_TO,
+    from: FORM_MAIL_FROM,
+    to: FORM_MAIL_TO,
   };
 }
 

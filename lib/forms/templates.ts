@@ -96,17 +96,3 @@ export function joinUsEmailText(data: {
     `Years of experience: ${data.experience}`,
   ].join("\n");
 }
-
-export function joinUsApplicantHtml(name: string) {
-  return `
-    <div style="font-family:system-ui,sans-serif;max-width:560px;color:#0f172a">
-      <p>Hi ${escapeHtml(name)},</p>
-      <p>Thank you for applying to drive with SIOX Transports. We received your application and our recruiting team will follow up with next steps.</p>
-      <p style="color:#64748b;font-size:14px">SIOX Transports</p>
-    </div>
-  `;
-}
-
-export function joinUsApplicantText(name: string) {
-  return `Hi ${name},\n\nThank you for applying to drive with SIOX Transports. We received your application and our recruiting team will follow up with next steps.\n\nSIOX Transports`;
-}

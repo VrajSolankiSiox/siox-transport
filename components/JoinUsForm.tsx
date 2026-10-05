@@ -53,7 +53,7 @@ export function JoinUsForm({
         <p className="text-xs font-semibold uppercase tracking-wider text-brand">Application received</p>
         <h2 className="mt-2 text-xl font-bold text-ink">Thank you, {sent.name}.</h2>
         <p className="mt-3 text-sm text-slate-600">
-          Your application was submitted successfully. Check your inbox for a confirmation email from our team.
+          Your application was submitted successfully. Our recruiting team will follow up with next steps.
         </p>
         <button
           type="button"
