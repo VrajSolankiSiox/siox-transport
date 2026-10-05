@@ -13,7 +13,8 @@ import {
 
 export const metadata: Metadata = {
   title: "Owner Operator Careers",
-  description: "Drive with SIOX Transports as an owner operator — flatbed, dry van, reefer, stepdeck, box truck, and hotshot.",
+  description:
+    "Drive with SIOX Transports as an owner operator — flatbed, dry van, reefer, stepdeck, box truck, and hotshot.",
 };
 
 export default function OwnerOperatorCareerPage() {
@@ -24,7 +25,7 @@ export default function OwnerOperatorCareerPage() {
         title={ownerOperatorContent.title}
         lede={ownerOperatorContent.lede}
       />
-      <section className="mx-auto max-w-6xl px-6 py-12 md:py-16">
+      <section className="mx-auto max-w-6xl px-6 pt-12 md:pt-16">
         <Reveal>
           <h2 className="text-xl font-bold text-ink">Why drive with SIOX</h2>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -36,7 +37,7 @@ export default function OwnerOperatorCareerPage() {
             ))}
           </ul>
         </Reveal>
-        <Reveal delay={0.05} className="relative mt-10 aspect-[21/9] overflow-hidden rounded-xl border border-border bg-slate-100">
+        {/* <Reveal delay={0.05} className="relative mt-10 aspect-[21/9] overflow-hidden rounded-xl border border-border bg-slate-100">
           <Image
             src={careerHeroImages.ownerOperator}
             alt="Owner operator truck on the highway"
@@ -44,7 +45,7 @@ export default function OwnerOperatorCareerPage() {
             className="object-cover"
             sizes="100vw"
           />
-        </Reveal>
+        </Reveal> */}
       </section>
       <CareerEquipmentSection
         equipment={ownerOperatorEquipment}

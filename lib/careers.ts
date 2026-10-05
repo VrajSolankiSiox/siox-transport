@@ -19,15 +19,12 @@ export const applyingForOptions = ["Owner Operator", "Company Driver"] as const;
 export type JoinEquipment = (typeof joinEquipmentOptions)[number];
 export type ApplyingFor = (typeof applyingForOptions)[number];
 
-const unsplash = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=900&q=80`;
-
 /** Equipment imagery — local photos from public/ */
 export const equipmentImages: Record<JoinEquipment, string> = {
   Flatbed: media.flatbed,
   Dryvan: media.dryVan,
   Reefer: media.reefer,
-  Stepdeck: unsplash("1519003722824-194d4455a60c"),
+  Stepdeck: media.stepDeck,
   "Box truck": media.boxTruck,
   Hotshot: media.hotshot,
 };

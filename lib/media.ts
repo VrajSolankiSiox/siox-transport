@@ -17,6 +17,7 @@ export const media = {
   reefer: "/Reefer.jpg",
   boxTruck: "/BoxTruck.jpg",
   hotshot: "/HotShot.jpg",
+  stepDeck: "/StepDeck.webp",
   heroVideo: "/vid.mp4",
   secondaryVideo: "/vid2.mp4",
 } as const;
